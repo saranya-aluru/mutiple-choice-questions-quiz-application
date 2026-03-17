@@ -1,0 +1,75 @@
+/* CO 1: CSS Fundamentals & Variable Management */
+:root {
+    --primary: #4a90e2;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --bg: #f4f7f6;
+    --card: #ffffff;
+}
+
+/* CO 1: Box Model & Body Styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    display: flex; /* CO 2: Flexbox Alignment */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    background: var(--card);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 550px;
+    text-align: center;
+}
+
+.hidden { display: none; }
+
+/* CO 2: Modern CSS Layout (Grid) */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* CO 4: Review List Styles */
+.scroll-box {
+    text-align: left;
+    margin-bottom: 20px;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.review-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+/* CO 1: Text Colors & UI Feedback */
+.correct-review { color: var(--success); font-weight: bold; }
+.wrong-review { color: var(--danger); font-weight: bold; }
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-easy { background: var(--success); color: white; }
+.btn-med { background: #f39c12; color: white; }
+.btn-hard { background: var(--danger); color: white; }
+.btn-reset { background: var(--primary); color: white; width: 100%; margin-top: 10px; }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz - Review System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div id="stats-bar" class="hidden">
+            <span>Score: <b id="score">0</b>/10</span>
+            <span>Misses: <b id="miss-count">0</b>/<span id="max-miss">0</span></span>
+        </div>
+
+        <section id="setup-screen">
+            <h1>Select Quiz Difficulty</h1>
+            <p>Pass criteria: Score 5/10</p>
+            <div class="difficulty-box">
+                <button onclick="startQuiz(7)" class="btn-easy">Easy (7 Misses)</button>
+                <button onclick="startQuiz(5)" class="btn-med">Medium (5 Misses)</button>
+                <button onclick="startQuiz(3)" class="btn-hard">Hard (3 Misses)</button>
+            </div>
+        </section>
+
+        <section id="quiz-screen" class="hidden">
+            <h2 id="question-text">Loading...</h2>
+            <div id="options-container" class="grid-layout"></div>
+        </section>
+
+        <section id="result-screen" class="hidden">
+            <h1 id="result-title">RESULT</h1>
+            <p id="result-summary"></p>
+            <div class="button-group">
+                <button onclick="showReview()" class="btn-med">Review Answers</button>
+                <button onclick="resetToHome()" class="btn-reset">Try Again</button>
+            </div>
+        </section>
+
+        <section id="review-screen" class="hidden">
+            <h1>Performance Review</h1>
+            <div id="review-list" class="scroll-box"></div>
+            <button onclick="resetToHome()" class="btn-reset">Back to Home</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
